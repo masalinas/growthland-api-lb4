@@ -1,7 +1,7 @@
-import {DefaultCrudRepository} from '@loopback/repository';
-import {GenMarca, GenMarcaRelations} from '../models';
-import {GrowthlandDsDataSource} from '../datasources';
 import {inject} from '@loopback/core';
+import {DefaultCrudRepository} from '@loopback/repository';
+import {GrowthlandDsDataSource} from '../datasources';
+import {GenMarca, GenMarcaRelations} from '../models';
 
 export class GenMarcaRepository extends DefaultCrudRepository<
   GenMarca,
