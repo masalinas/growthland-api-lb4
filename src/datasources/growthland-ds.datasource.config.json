@@ -1,0 +1,10 @@
+{
+  "name": "growthlandDS",
+  "connector": "mssql",
+  "url": "mssql://sa:!Thingtrack2010@localhost/PUBLISHER",
+  "host": "localhost",
+  "port": 1433,
+  "user": "sa",
+  "password": "!Thingtrack2010",
+  "database": "PUBLISHER"
+}
