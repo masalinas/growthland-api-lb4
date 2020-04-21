@@ -6,21 +6,25 @@
 
 npm install loopback-connector-mssql --save
 
-## Create Datasource
+## Create Datasource and fill wizard
 
 lb4 datasource
 
-## Compile project before discover
+## Compile project before discover (inverse engineering data model)
 
 npm run build
 
-## Create modes from inverse Enginnering from Datasource Database
+## Create models for all entities from inverse Enginnering using SQL Server datasource and schema
 
 lb4 discover --all --schema PUBLISHER
 
 ## Create Repositories from models
 
 lb4 repository
+
+## Create Controller for each Repository select controller
+
+lb4 controller GenCliente
 
 ## Start project
 
