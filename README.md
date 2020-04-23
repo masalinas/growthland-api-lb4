@@ -6,7 +6,7 @@
 
 npm install loopback-connector-mssql --save
 
-## Create Datasource and fill wizard
+## Create Datasource and fill datasource wizard
 
 lb4 datasource
 
@@ -18,7 +18,7 @@ npm run build
 
 lb4 discover --all --schema PUBLISHER
 
-## Create Repositories from models
+## Create Repositories for all models
 
 lb4 repository
 
@@ -29,3 +29,15 @@ lb4 controller GenCliente
 ## Start project
 
 npm start
+
+## Start project with debug activate
+
+DEBUG=loopback:repository:relation-helpers node .
+
+## generate C# models from swagger.json specification file. Install [swagger codegen cli](https://mvnrepository.com/artifact/io.swagger.codegen.v3/swagger-codegen-cli/3.0.19)
+
+java -jar swagger-codegen-cli-3.0.19.jar generate -i swagger.json -l csharp
+
+## generate Angular Typescript from swagger.json specification file. Install [swagger codegen cli](https://mvnrepository.com/artifact/io.swagger.codegen.v3/swagger-codegen-cli/3.0.19)
+
+java -jar swagger-codegen-cli-3.0.19.jar generate -i swagger.json -l typescript-angular

@@ -1,23 +1,40 @@
 import {Entity, model, property} from '@loopback/repository';
 
 @model({
-  settings: {idInjection: false, mssql: {schema: 'PUBLISHER', table: 'SEG_USUARIO'}}
+  settings: {
+    idInjection: false,
+    mssql: {schema: 'PUBLISHER', table: 'SEG_USUARIO'},
+  },
 })
 export class SegUsuario extends Entity {
   @property({
-    type: 'string',
-    required: true,
-    length: 50,
+    type: 'number',
+    precision: 19,
+    scale: 0,
     id: 1,
-    mssql: {columnName: 'ID_USUARIO', dataType: 'varchar', dataLength: 50, dataPrecision: null, dataScale: null, nullable: 'NO'},
+    mssql: {
+      columnName: 'ID_USUARIO',
+      dataType: 'bigint',
+      dataLength: null,
+      dataPrecision: 19,
+      dataScale: 0,
+      nullable: 'NO',
+    },
   })
-  idUsuario: string;
+  idUsuario: number;
 
   @property({
     type: 'string',
     required: true,
     length: 100,
-    mssql: {columnName: 'NOM_USUARIO', dataType: 'varchar', dataLength: 100, dataPrecision: null, dataScale: null, nullable: 'NO'},
+    mssql: {
+      columnName: 'NOM_USUARIO',
+      dataType: 'varchar',
+      dataLength: 100,
+      dataPrecision: null,
+      dataScale: null,
+      nullable: 'NO',
+    },
   })
   nomUsuario: string;
 
@@ -25,7 +42,14 @@ export class SegUsuario extends Entity {
     type: 'string',
     required: true,
     length: 60,
-    mssql: {columnName: 'CONTRASENA', dataType: 'varchar', dataLength: 60, dataPrecision: null, dataScale: null, nullable: 'NO'},
+    mssql: {
+      columnName: 'CONTRASENA',
+      dataType: 'varchar',
+      dataLength: 60,
+      dataPrecision: null,
+      dataScale: null,
+      nullable: 'NO',
+    },
   })
   contrasena: string;
 
@@ -33,7 +57,14 @@ export class SegUsuario extends Entity {
     type: 'number',
     precision: 3,
     scale: 0,
-    mssql: {columnName: 'ACTIVO', dataType: 'tinyint', dataLength: null, dataPrecision: 3, dataScale: 0, nullable: 'YES'},
+    mssql: {
+      columnName: 'ACTIVO',
+      dataType: 'tinyint',
+      dataLength: null,
+      dataPrecision: 3,
+      dataScale: 0,
+      nullable: 'YES',
+    },
   })
   activo?: number;
 
